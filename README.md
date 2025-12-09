@@ -35,7 +35,8 @@ All templates share the same layout, terminology, and control flow, making it ea
 
 ```python
 # 1. Choose a unique deviceId per worker
-device_id = os.getenv("MACHINEID_DEVICE_ID", f"worker-{uuid.uuid4()}")
+device_id = os.getenv("MACHINEID_DEVICE_ID", "agent-01")
+
 
 # 2. Register once (idempotent)
 register_response = register(org_key, device_id)
@@ -58,7 +59,7 @@ Never wake up to 87 runaway workers again.
 
 Every template follows the same MachineID.io workflow:
 
-1. **Assign a `deviceId`** (name or UUID)  
+1. **Assign a `deviceId`** (name)  
 2. **Register the device** using `/api/v1/devices/register`  
 3. **Validate the device** using `/api/v1/devices/validate`  
 4. **Stop or skip work when validation fails**
