@@ -84,18 +84,6 @@ These examples are ideal for:
 
 ---
 
-## **Advanced (Optional)**
-
-Power users and meta-agents can also create orgs programmatically via:
-
-```
-POST /api/v1/org/create
-```
-
-See the **Advanced** section inside each template for a ready-to-run `curl` example.  
-A dedicated “bootstrap a fleet from zero” template will be released in the future.
-
----
 
 ## **Next Steps**
 
